@@ -1,17 +1,8 @@
 # Thorr-fib
 
-Just playing with JavaScript
+A simple Fibonacci sequence recursive implementation, made to play a bit with the NodeJS tool stack.
 
 ## Usage
-
-**in the browser**
-
-```javascript
-Thorr.fib(10);
-// [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
-```
-
-**in nodejs**
 
 ```javascript
 var fib = require('thorr-fib');

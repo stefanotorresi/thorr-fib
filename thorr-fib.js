@@ -1,29 +1,21 @@
-if (typeof Thorr === 'undefined') {
-	function Thorr() {}
-}
+(function() {
+    'use strict';
 
-(function(){
+    require('array.prototype.fill');
 
-	function fib(n) {
-		if (n < 1) {
-			throw 'n must be >= 1';
-		}
-		if (n === 1) {
-			return [ 1 ];
-		}
-		if (n === 2) {
-			return [ 1, 1 ];
-		}
-		var numbers = fib(n-1);
-		numbers.push(numbers[numbers.length-1] + numbers[numbers.length-2]);
+    function fib(n) {
+        if (n < 1) {
+            throw 'n must be >= 1';
+        }
+        if (n === 1 || n === 2) {
+            return new Array(n).fill(1);
+        }
+        var numbers = fib(n - 1);
+        numbers.push(numbers[numbers.length - 1] + numbers[numbers.length - 2]);
 
-		return numbers;
-	}
+        return numbers;
+    }
 
-	Thorr.fib = fib;
+    module.exports = fib;
 
 })();
-
-if ((typeof module !== 'undefined') && (typeof module.exports !== 'undefined')) {
-	module.exports = Thorr.fib;
-}
