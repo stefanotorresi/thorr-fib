@@ -4,17 +4,17 @@ Just playing with JavaScript
 
 ## Usage
 
-** in the browser **
+**in the browser**
 
 ```javascript
-Thorr.fib(10)
+Thorr.fib(10);
 // [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
 ```
 
-** in nodejs **
+**in nodejs**
 
 ```javascript
-fib = require('thorr-fib');
+var fib = require('thorr-fib');
 fib(10);
 // [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 ]
 ```
